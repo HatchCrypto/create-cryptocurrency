@@ -1,12 +1,11 @@
 Creating your own cryptocurrency by forking litecoin
 ====================================
 
-Read this article completely: https://www.hackster.io/pjdecarlo/how-to-make-a-cryptocurrency-using-litecoin-v0-15-source-fb5e82
+Read this article completely, we will be using it as the main guide. https://www.hackster.io/pjdecarlo/how-to-make-a-cryptocurrency-using-litecoin-v0-15-source-fb5e82
 
 If on a Mac
 -----------
-* Use GNU sed/find or run these commands on a linux box.  warning: 'sed' and 'find' commands on Mac are POSIX and not GNU, and therefore have different options
-* https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/
+* Warning: 'sed' and 'find' commands on Mac are POSIX and not GNU, and therefore behave differently than linux 'sed' and 'find'.  If you want to follow tutorial, install GNU sed & find.  https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/
 
 Steps
 -----
@@ -21,7 +20,17 @@ Steps
     * Docker Docs, Get Started: https://docs.docker.com/get-started/ (read part 1, 2)
     * Debug Broken Docker Builds: https://www.youtube.com/watch?v=RH_I0KXHBcA
     * Tip: build your docker image from a fresh git clone of hatchcoin so that .gitignore files are ignored
-    
+    * Configure automated builds on Docker Hub: https://docs.docker.com/docker-hub/builds/
+4. Edit the code
+  * pchMessageStart magic number
+    * https://bitcoin.stackexchange.com/questions/43189/what-is-the-magic-number-used-in-the-block-structure/43191#43191
+  * update base58Prefixes to unique values
+  * create the Genesis Block and associated Merkle Root
+  * remove dnsseeds and seednodes
+  * set minimum chain work to 0x00
+  * change the default port
+  * deploy a minimum of 2 nodes (I use Digital Ocean)
+  * create a .conf file to configure your client to connect to nodes
 
 
 
