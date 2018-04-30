@@ -26,10 +26,12 @@ Steps
     * https://bitcoin.stackexchange.com/questions/43189/what-is-the-magic-number-used-in-the-block-structure/43191#43191
   * update base58Prefixes to unique values
   * create the Genesis Block and associated Merkle Root
+    * important: make sure your pszTimestamp is less than 64 characters or program will crash!
   * remove dnsseeds and seednodes
   * set minimum chain work to 0x00
   * change the default port
-  * deploy a minimum of 2 nodes (I use Digital Ocean)
+  * run the daemon with `./src/hatchcoind --printtoconsole`
+  * deploy a minimum of 2 nodes (you can use your local machine)
   * create a .conf file to configure your client to connect to nodes
 
 
