@@ -10,6 +10,7 @@ If on a Mac
 Steps
 -----
 1. Fork and clone litecoin, pull, switch to branch 0.15, then compile litecoin.  Compilation should take 15-30 minutes.
+  * https://github.com/litecoin-project/litecoin/
 2. Complete the renaming and recompile
   * if you get compilation errors, you may need to rename some files from litecoin* to hatchcoin* (in ./src/qt/res and ./doc/man)
 3. Create the docker image
@@ -28,6 +29,7 @@ Steps
   * create the Genesis Block and associated Merkle Root
     * important: make sure your pszTimestamp is less than 64 characters or program will crash!
   * remove dnsseeds and seednodes
+    * https://bitcoin.stackexchange.com/questions/53260/what-precisely-are-vseeds-seednodes-how-to-they-work-how-to-create-one-for-a
   * set minimum chain work to 0x00
   * change the default port
   * run the daemon with `./src/hatchcoind --printtoconsole`
